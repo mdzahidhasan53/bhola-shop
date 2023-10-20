@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "brand_name":"Apple",
+        "img":"https://i.postimg.cc/MZ9t47nm/apple-logo.jpg"
+    },
+    {
+        "id": 2,
+        "brand_name":"Samsung",
+        "img":"https://i.postimg.cc/PqK8x4s6/samsung-logo.png"
+    },
+    {
+        "id": 3,
+        "brand_name":"Realme",
+        "img":"https://i.postimg.cc/zBbtF3j1/Realme-Logo.png"
+    },
+    {
+        "id": 4,
+        "brand_name":"Oppo",
+        "img":"https://i.postimg.cc/7YMBVFgb/oppo-logo.jpg"
+    },
+    {
+        "id": 5,
+        "brand_name":"Nokia",
+        "img":"https://i.postimg.cc/6qzv7fv6/nokia-logo.jpg"
+    },
+    {
+        "id": 6,
+        "brand_name":"Motorola",
+        "img":"https://i.postimg.cc/FzKK65Ym/motorola-logo.png"
+    }
+]
