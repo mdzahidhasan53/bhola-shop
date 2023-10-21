@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 const Navbar = () => {
     const [theme, setTheme] = useState('light');
+    const { user, logOut } = useContext(AuthContext);
     const toggleTheme = () => {
         if (theme === 'light') {
           setTheme('dark');
@@ -14,9 +16,16 @@ const Navbar = () => {
       useEffect(() => {
         document.body.className = theme;
       }, [theme]);
+
+      const handleSignOut = () =>{
+        logOut()
+        .then()
+        .catch()
+    }
+
     const navLinks = <>
         <li><NavLink to="/"><a>Home</a></NavLink></li>
-        <li><NavLink to="/about"><a>About Us</a></NavLink></li>
+        <li><NavLink to="/addProduct"><a>Add Product</a></NavLink></li>
         <li><NavLink to="/services"><a>Services</a></NavLink></li>
         <li><NavLink to="/contact"><a>Contact</a></NavLink></li>
         <li><NavLink to="/register"><a>Register</a></NavLink></li>
@@ -57,7 +66,12 @@ const Navbar = () => {
                 </label>
                 </button>
             </div>
-                <a className="btn">Button</a>
+            {
+          user ? 
+          <a onClick={handleSignOut} className="btn normal-case">SignOut</a>
+          :
+          <Link to="/login"><a className="btn normal-case">Login</a></Link>
+        }
             </div>
         </div>
     );
