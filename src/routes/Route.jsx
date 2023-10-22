@@ -39,7 +39,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/product/:id",
-                element: <Details></Details>,
+                element: <PrivateRoutes><Details></Details></PrivateRoutes>,
                 loader: ()=>fetch('https://bhola-shop-server-msgrxnggi-sazids-projects.vercel.app/products')
             }
         ],
