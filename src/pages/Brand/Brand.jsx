@@ -5,7 +5,7 @@ const Brand = ({ brand }) => {
     const { brand_name, img } = brand;
     return (
         <div className="">
-            <Link to={`/product/${brand_name}`}>
+            <Link to={`/brand/${brand_name}`}>
                 <div className="hero-content flex-col lg:flex-row w-1/2">
                     <img src={img} className="w-[280px] h-[150px] rounded-lg" />
                     <div>

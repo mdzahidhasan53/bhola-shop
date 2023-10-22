@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Product = ({ product }) => {
     const { _id, name, brand, type, photo } = product;
@@ -10,7 +11,9 @@ const Product = ({ product }) => {
                 <p className='font-medium'>{brand}</p>
                 <p>{type}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Details</button>
+                    <Link to={`/product/${_id}`}>
+                        <button className="btn btn-primary">Details</button>
+                    </Link>
                     <button className="btn btn-primary">Update</button>
                 </div>
             </div>
@@ -20,17 +23,3 @@ const Product = ({ product }) => {
 
 export default Product;
 
-// 
-// product
-// "Mac note book"
-// brand
-// "Apple"
-// type
-// "Note book"
-// price
-// "23000"
-// ratting
-// "4"
-// description
-// "Big screen, longlife bettery"
-// photo
