@@ -4,14 +4,14 @@ const AddProducts = () => {
     const handleAddProduct = event =>{
         event.preventDefault();
         const form = event.target;
-        const product = form.product.value;
+        const name = form.name.value;
         const brand = form.brand.value;
         const type = form.type.value;
         const price = form.price.value;
         const ratting = form.ratting.value;
         const description = form.description.value;
         const photo = form.photo.value;
-        const newProduct = {product, brand,type, price, ratting, description, photo};
+        const newProduct = {name, brand,type, price, ratting, description, photo};
         console.log(newProduct);
         // send data to server 
         fetch('http://localhost:5000/products', {
@@ -51,7 +51,7 @@ const AddProducts = () => {
                             <label className="label">
                                 <span className="label-text">Product Name</span>
                             </label>
-                            <input type="text" name="product" placeholder="Product Name" className="input input-bordered" required />
+                            <input type="text" name="name" placeholder="Product Name" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
