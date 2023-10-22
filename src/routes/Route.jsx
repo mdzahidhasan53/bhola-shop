@@ -35,12 +35,12 @@ const router = createBrowserRouter([
             {
                 path: "/brand/:name",
                 element: <Products></Products>,
-                loader: ()=>fetch('http://localhost:5000/products')
+                loader: ()=>fetch('https://bhola-shop-server-msgrxnggi-sazids-projects.vercel.app/products')
             },
             {
                 path: "/product/:id",
                 element: <Details></Details>,
-                loader: ()=>fetch('http://localhost:5000/products')
+                loader: ()=>fetch('https://bhola-shop-server-msgrxnggi-sazids-projects.vercel.app/products')
             }
         ],
     },

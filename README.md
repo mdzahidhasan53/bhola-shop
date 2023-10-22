@@ -1,6 +1,6 @@
 ## Bhola Tech shop
 
-### live link
+### live link: https://bhola-shop.web.app/
 
 Details this projects:
 
